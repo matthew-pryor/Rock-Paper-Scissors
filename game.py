@@ -4,11 +4,10 @@ from ai import Ai
 class Game:
     
     def __init__(self) -> None:
-        pass
+        
+        self.player_1 = Human()
 
     def introduction(self): #displays rules and asks the user if they want to play single player or multiplayer. void
-
-        self.player_1 = Human()
 
         player_1_input_valid = False
 
@@ -47,6 +46,8 @@ class Game:
             self.player_1.choose_gesture()
         
             self.player_2.choose_gesture()
+
+            self.compare_gestures()
 
     def compare_gestures(self):
 
