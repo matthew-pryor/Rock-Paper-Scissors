@@ -11,6 +11,10 @@ class Game:
 
         player_1_input_valid = False
 
+        self.player_1.set_name()
+
+        print(f'Welcome to the game {self.player_1.name}')
+
         while player_1_input_valid is False:
 
             player_1_input = input('Would you like to play against an opponent or by yourself: Press [1] to play with a friend or press [2] play against the CPU. ')
