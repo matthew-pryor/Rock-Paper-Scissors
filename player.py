@@ -3,10 +3,10 @@
 
 class Player:
 
-    def __init__(self, name):
+    def __init__(self):
         
         self.wins = 0
-        self.name = name
+        self.name = ''
         self.list_of_gestures = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
         self.chosen_gesture = ''
 

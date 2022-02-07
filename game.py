@@ -9,7 +9,7 @@ class Game:
 
     def introduction(self): #displays rules and asks the user if they want to play single player or multiplayer. void
 
-        player_1 = Human()
+        self.player_1 = Human()
 
         player_1_input_valid = False
 
@@ -19,12 +19,12 @@ class Game:
 
             if(player_1_input == '1'):
 
-                player_2 = Human()
+                self.player_2 = Human()
                 player_1_input_valid = True
 
             elif(player_1_input == '2'):
 
-                player_2 = Ai()
+                self.player_2 = Ai()
                 player_1_input_valid = True
 
             else:
@@ -38,13 +38,12 @@ class Game:
         pass
 
     def round(self): #keeps track of wins - while loop until wins for either player == 2. void
-        pass
 
-    def player_1(self): #picks from the list of options void
-        pass
-
-    def player_2(self): #picks from the list. If they choose singleplayer in the welcome, then AI overrides and just picks randomly from the list of options. void
-        pass
+        while self.player_1.wins < 2 or self.player_2 < 2:
+        
+            self.player_1.choose_gesture()
+        
+            self.player_2.choose_gesture()
 
     def display_winner(self): #once two wins are achieved by either player, this is displayed. void, funtion complete.
         pass
