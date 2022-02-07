@@ -34,20 +34,30 @@ class Game:
     def run_game(self): #runs all functions. void
         
         self.introduction()
+
+        self.winner = False
+
+        while self.winner is False:
         
-        self.round()
+            self.round()
+
+            if ((self.player_1.wins < 2) or (self.player_2.wins < 2)):
+                
+                self.winner = True
+
+            else:
+
+                self.winner = False
 
         self.display_winner()
 
-    def round(self): #keeps track of wins - while loop until wins for either player == 2. void
-
-        while self.player_1.wins < 2 or self.player_2.wins < 2:
+    def round(self): #keeps track of wins - while loop until wins for either player == 2. void self.player_1.wins < 2 or self.player_2.wins < 2:
         
-            self.player_1.choose_gesture()
+        self.player_1.choose_gesture()
         
-            self.player_2.choose_gesture()
+        self.player_2.choose_gesture()
 
-            self.compare_gestures()
+        self.compare_gestures()
 
     def compare_gestures(self):
 
