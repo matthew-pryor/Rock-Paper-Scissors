@@ -27,4 +27,16 @@ from game import Game
 
 game = Game()
 
-game.introduction()
+list_of_gestures = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
+        
+for gesture in list_of_gestures:
+
+    print(f'Press [{list_of_gestures.index(gesture)}] for {gesture}.')
+
+chosen_gesture = input('Selection: ')
+
+integer_chosen_gesture = int(chosen_gesture)
+
+chosen_gesture = list_of_gestures[integer_chosen_gesture]
+
+print(chosen_gesture)
