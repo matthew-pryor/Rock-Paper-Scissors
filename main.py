@@ -22,3 +22,5 @@
 #spock vaporizes rock
 
 #each variable or item in the list wins x2, loses 2x, and only ties with itself.
+
+from game import Game
