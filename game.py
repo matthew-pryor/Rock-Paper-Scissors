@@ -41,7 +41,7 @@ class Game:
         
             self.round()
 
-            if ((self.player_1.wins < 2) or (self.player_2.wins < 2)):
+            if ((self.player_1.wins == 2) or (self.player_2.wins == 2)):
                 
                 self.winner = True
 
