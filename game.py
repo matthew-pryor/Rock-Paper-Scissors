@@ -6,7 +6,6 @@ class Game:
     def __init__(self) -> None:
         
         self.player_1 = Human()
-        self.ai = Ai()
 
     def introduction(self): #displays rules and asks the user if they want to play single player or multiplayer. void
 
@@ -21,8 +20,8 @@ class Game:
             player_1_input = input('Would you like to play against an opponent or by yourself: Press [1] to play with a friend or press [2] play against the CPU. ')
 
             if(player_1_input == '1'):
-                self.player_2.name = input("What is the 2nd player's name?\n")
                 self.player_2 = Human()
+                self.player_2.name = input("What is the 2nd player's name?\n")
                 player_1_input_valid = True
 
             elif(player_1_input == '2'):
