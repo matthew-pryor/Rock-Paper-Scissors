@@ -71,7 +71,8 @@ class Game:
         self.display_winner()
 
     def round(self): #keeps track of wins - while loop until wins for either player == 2. void self.player_1.wins < 2 or self.player_2.wins < 2:
-        
+
+   
         self.player_1.choose_gesture()
         
         self.player_2.choose_gesture()
@@ -189,15 +190,30 @@ class Game:
 
     def display_winner(self): #once two wins are achieved by either player, this is displayed. void, funtion complete.
         
-        if (self.player_1.wins == 2):
+        
 
-            print(f"{self.player_1.name} has won the game!\n")
+            if (self.player_1.wins == 2):
 
-        elif (self.player_2.wins):
+                print(f"{self.player_1.name} has won the game!\n")
 
-            print(f"{self.player_2.name} has won the game!\n")
+            elif (self.player_2.wins):
 
-        # elif (self..wins == 2):
-            # print ("The AI has become self-aware and won the game!\n")
+                print(f"{self.player_2.name} has won the game!\n")
 
+
+            while True:
+
+                play_again = (input("Would you like to play again(Yes, No?) "))
+                if play_again != "Yes":
+                    play_again = False
+                    print("Goodbye!")
+                    break
+                self.player_1.wins = 0
+                self.player_2.wins = 0
+                self.run_game()
+                
+             
+                
+                    
+                
         
