@@ -28,11 +28,14 @@ class Game:
 
         while player_1_input_valid is False:
 
-            player_1_input = input('Would you like to play against an opponent or the AI?: Press [1] to play with a friend or press [2] to face the CPU. \n')
+            player_1_input = input('Would you like to play against an opponent or the AI?: Press [1] to play with a friend or [2] to face the CPU. \n')
+            print("")
 
             if(player_1_input == '1'):
                 self.player_2 = Human()
-                self.player_2.name = input("What is the 2nd player's name?\n")
+                self.player_2.name = input("What is the 2nd player's name?  \n")
+                print("")
+                print(f"Welcome to the game, {self.player_2.name}\n")
                 player_1_input_valid = True
 
             elif(player_1_input == '2'):
