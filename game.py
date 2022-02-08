@@ -76,9 +76,10 @@ class Game:
 
     def round(self): #keeps track of wins - while loop until wins for either player == 2. void self.player_1.wins < 2 or self.player_2.wins < 2:
 
-   
+        print(f"It is now {self.player_1.name}'s turn")
         self.player_1.choose_gesture()
-        
+                
+        print(f"It is now {self.player_2.name}'s turn")
         self.player_2.choose_gesture()
 
         self.compare_gestures()
