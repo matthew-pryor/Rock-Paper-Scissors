@@ -16,11 +16,3 @@ class Ai(Player):
         self.chosen_gesture = self.list_of_gestures[chosen_gesture_index]
 
         return self.chosen_gesture
-
-    # def random_ai_selection(self):
-
-        
-        
-    #     self.random_selection = random.choice(self.list_of_gestures)
-        
-    #     return self.random_selection

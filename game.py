@@ -1,8 +1,6 @@
 from human import Human
 from ai import Ai
 
-# Add how many rounds the players want to play.
-
 class Game:
     
     def __init__(self) -> None:
