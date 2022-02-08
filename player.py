@@ -16,15 +16,15 @@ class Player:
 
         while valid_gesture is False:
 
-            list_of_gestures = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
+            list_of_gestures = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock\n']
             
             for gesture in list_of_gestures:
 
-                print(f'Press [{list_of_gestures.index(gesture)}] for {gesture}.')
+                print(f'Press [{list_of_gestures.index(gesture)}] for {gesture}')
 
-            chosen_gesture = input('Selection: ')
+            chosen_gesture = input('Selection: \n')
 
-            if (chosen_gesture == '0' or chosen_gesture == '1' or chosen_gesture == '2' or chosen_gesture == '3' or chosen_gesture == '4' or chosen_gesture == '5'):
+            if (chosen_gesture == '0' or chosen_gesture == '1' or chosen_gesture == '2' or chosen_gesture == '3' or chosen_gesture == '4'):
 
                 valid_gesture = True
                 

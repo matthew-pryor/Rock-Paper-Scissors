@@ -15,11 +15,12 @@ class Game:
 
         print(f'Welcome to the game {self.player_1.name}\n')
 
-        print("Before you play you'll have to know the rules! This isn't your ma and pa's rock, paper, scissors!")
+        print("Before you play you'll have to know the rules! This isn't your ma and pa's rock, paper, scissors!\n")
 
-        print("Here are the rules!")
+        print("HERE ARE THE RULES!\n")
+        print("****************************")
 
-        list_of_rules = ['Rock crushes Scissors', 'Rock smashes Lizard', 'Scissors cuts Paper', 'Scissors decapitates Lizard', 'Paper covers Rock', 'Paper disproves Spock', 'Lizard poisons Spock', 'Lizard eats Paper', 'Spock smashes Scissors', 'Spock vaporizes Rock']
+        list_of_rules = ['--Rock crushes Scissors & smashes Lizard', '--Scissors cuts Paper & decapitates Lizard', '--Paper covers Rock & disproves Spock', '--Lizard poisons Spock & eats Paper', '--Spock smashes Scissors & vaporizes Rock\n']
 
         for rule in list_of_rules:
 
@@ -27,7 +28,7 @@ class Game:
 
         while player_1_input_valid is False:
 
-            player_1_input = input('Would you like to play against an opponent or by yourself: Press [1] to play with a friend or press [2] play against the CPU. ')
+            player_1_input = input('Would you like to play against an opponent or the AI?: Press [1] to play with a friend or press [2] to face the CPU. \n')
 
             if(player_1_input == '1'):
                 self.player_2 = Human()
