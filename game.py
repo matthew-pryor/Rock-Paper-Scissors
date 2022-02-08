@@ -154,4 +154,11 @@ class Game:
 
     def display_winner(self): #once two wins are achieved by either player, this is displayed. void, funtion complete.
         
-        print('Winner')
+        if (self.player_1.wins == 2):
+            print(f"{self.player_1.name} has won the game!")
+        elif (self.player_2.wins):
+            print(f"{self.player_2.name} has won the game!")
+        elif (self.ai.wins == 2):
+            print ("The AI has become self-aware and won the game!")
+
+        
