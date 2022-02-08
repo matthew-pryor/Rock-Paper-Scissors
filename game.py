@@ -1,6 +1,8 @@
 from human import Human
 from ai import Ai
 
+# Add how many rounds the players want to play.
+
 class Game:
     
     def __init__(self) -> None:
@@ -18,13 +20,15 @@ class Game:
         print("Before you play you'll have to know the rules! This isn't your ma and pa's rock, paper, scissors!\n")
 
         print("HERE ARE THE RULES!\n")
-        print("****************************")
+        print("************************************************************************************")
 
         list_of_rules = ['--Rock crushes Scissors & smashes Lizard', '--Scissors cuts Paper & decapitates Lizard', '--Paper covers Rock & disproves Spock', '--Lizard poisons Spock & eats Paper', '--Spock smashes Scissors & vaporizes Rock\n']
 
         for rule in list_of_rules:
 
             print(rule)
+
+        print("************************************************************************************")
 
         while player_1_input_valid is False:
 
@@ -189,28 +193,50 @@ class Game:
         
 
     def display_winner(self): #once two wins are achieved by either player, this is displayed. void, funtion complete.
-        
-        
 
             if (self.player_1.wins == 2):
 
                 print(f"{self.player_1.name} has won the game!\n")
 
-            elif (self.player_2.wins):
+            elif (self.player_2.wins == 2):
 
-                print(f"{self.player_2.name} has won the game!\n")
+                if (self.player_2.name == 'WALL-E'):
 
+                    print("WALL-E had become self-aware and has finally defeated his human overlords!\n")
 
-            while True:
+                else:
 
-                play_again = (input("Would you like to play again(Yes, No?) "))
-                if play_again != "Yes":
-                    play_again = False
+                    print(f"{self.player_2.name} has won the game!\n")
+
+            play_again_value = False
+
+            while play_again_value is False:
+
+                play_again = (input("Would you like to play again? Yes or No. "))
+
+                if (play_again == 'Yes' or play_again == 'yes' or play_again == 'y'):
+
+                    play_again_value = True
+                    
+                    self.player_1.wins = 0
+
+                    self.player_2.wins = 0
+
+                    self.run_game()
+
+                elif (play_again == "No" or play_again == 'no' or play_again == 'n'):
+
+                    play_again = True
+
                     print("Goodbye!")
+
                     break
-                self.player_1.wins = 0
-                self.player_2.wins = 0
-                self.run_game()
+
+                else:
+                
+                    print('Invalid response, please try again.')
+
+                    play_again_value = False
                 
              
                 
