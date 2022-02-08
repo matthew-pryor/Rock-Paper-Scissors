@@ -10,4 +10,4 @@ class Human(Player):
 
     def set_name(self):
 
-            self.name = input("Welcome to the game. What is your name?  \n")
+            self.name = input("Welcome to the game. What is your name? ")

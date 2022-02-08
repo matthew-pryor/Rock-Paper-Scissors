@@ -22,7 +22,8 @@ class Player:
 
                 print(f'Press [{list_of_gestures.index(gesture)}] for {gesture}')
 
-            chosen_gesture = input('Selection: \n')
+            chosen_gesture = input('Selection: ')
+            print("")
 
             if (chosen_gesture == '0' or chosen_gesture == '1' or chosen_gesture == '2' or chosen_gesture == '3' or chosen_gesture == '4'):
 
