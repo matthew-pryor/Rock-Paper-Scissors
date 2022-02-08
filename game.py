@@ -9,6 +9,8 @@ class Game:
         
         self.player_1 = Human()
 
+        self.desired_rounds = 2
+
     def introduction(self): #displays rules and asks the user if they want to play single player or multiplayer. void
 
         player_1_input_valid = False
@@ -32,7 +34,7 @@ class Game:
 
         while player_1_input_valid is False:
 
-            player_1_input = input('Would you like to play against an opponent or the AI?: Press [1] to play with a friend or [2] to face the CPU. \n')
+            player_1_input = input('Would you like to play against an opponent or the AI?: Press [1] to play with a friend or [2] to face the CPU. ')
             print("")
 
             if(player_1_input == '1'):
@@ -52,6 +54,28 @@ class Game:
                 print('Invalid response, please try again.')
                 player_1_input_valid = False
 
+        is_digit = False
+
+        while is_digit is False:
+
+            self.desired_rounds_input = (input('How many rounds do you want to win the game? '))
+            
+            if self.desired_rounds_input.isnumeric() == True:
+
+                self.desired_rounds = int(self.desired_rounds_input)
+
+                self.maximum_rounds = (self.desired_rounds * 2) - 1
+
+                print(f"Looks like you chose best {self.desired_rounds} out of {self.maximum_rounds}.\n")
+
+                is_digit = True
+
+            else:
+
+                print('Invalid response, please try again.')
+
+                is_digit = False
+
 
     def run_game(self): #runs all functions. void
         
@@ -63,7 +87,7 @@ class Game:
         
             self.round()
 
-            if ((self.player_1.wins == 2) or (self.player_2.wins == 2)):
+            if ((self.player_1.wins == self.desired_rounds) or (self.player_2.wins == self.desired_rounds)):
                 
                 self.winner = True
             
@@ -195,11 +219,11 @@ class Game:
 
     def display_winner(self): #once two wins are achieved by either player, this is displayed. void, funtion complete.
 
-            if (self.player_1.wins == 2):
+            if (self.player_1.wins == self.desired_rounds):
 
                 print(f"{self.player_1.name} has won the game!\n")
 
-            elif (self.player_2.wins == 2):
+            elif (self.player_2.wins == self.desired_rounds):
 
                 if (self.player_2.name == 'WALL-E'):
 
