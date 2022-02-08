@@ -66,6 +66,7 @@ class Game:
             else:
 
                 self.winner = False
+                print(f"{self.player_1.name} has {self.player_1.wins} wins and {self.player_2.name} has {self.player_2.wins} wins.\n")
 
         self.display_winner()
 
@@ -183,6 +184,8 @@ class Game:
             print(f'{self.player_2.name} and {self.player_1.name} chose the same thing!')
             print("It's a tie, no one wins. Select again.\n")
             self.player_2.wins += 0
+
+        
 
     def display_winner(self): #once two wins are achieved by either player, this is displayed. void, funtion complete.
         
