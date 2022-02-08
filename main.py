@@ -6,20 +6,6 @@
 # if wins = 2 then winner == True
 # account for ties (thing == thing)
 
-#Rock curshes scissors
-#rock crushes lizard
-
-#Scissors cut paper
-#scissors decapitates lizard
-
-#paper covers rock
-#paper disproves spock
-
-#lizard poisons spock
-#lizard eats paper
-
-#spock smashes scissors
-#spock vaporizes rock
 
 #each variable or item in the list wins x2, loses 2x, and only ties with itself.
 
